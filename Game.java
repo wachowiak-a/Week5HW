@@ -10,5 +10,6 @@ class Location {
 }
 
 class EnemyFish {
+  Location loc;
   
 }
