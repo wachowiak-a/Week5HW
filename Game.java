@@ -1,15 +1,55 @@
-import tester.*;                // The tester library
-import javalib.worldimages.*;   // images, like RectangleImage or OverlayImages
-import javalib.funworld.*;      // the abstract World class and the big-bang library
-import java.awt.Color;          // general colors (as triples of red,green,blue values)
-                                // and predefined colors (Red, Green, Yellow, Blue, Black, White)
+import tester.Tester;
+import javalib.funworld.*;
+import javalib.worldimages.*;
+import java.awt.Color;
+import java.util.Random;
 
-class Location {
-  int x; // x-coordinate
-  int y; // y-coordinate
+
+
+// Represent the world of the fish game
+class FishWorld extends World {
+    int width = 500;
+    int height = 500;
+    Player player;
+
+    // The constructor 
+    public FishWorld(Player player) {
+        super();
+        this.player = player;
+    }
 }
+
+class Player {
+  int x; 
+  int y; 
+  int size; 
+  Color col;
+ 
+    // The constructor 
+    Player(int x, int y, int radius, Color col) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.col = col;
+    }
+}
+
 
 class EnemyFish {
   Location loc;
+  int x; 
+  int y; 
+  int size; 
+  Color col;
+  
+  // The constructor 
+    EnemyFish(int x, int y, int radius, Color col) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.col = col;
+    }
   
 }
+
+
